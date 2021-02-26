@@ -84,6 +84,18 @@ py_test(
 )
 
 py_test(
+    name = "datasets_test",
+    timeout = "short",
+    srcs = ["datasets_test.py"],
+    deps = [
+        "//compiler_gym",
+        "//tests:test_main",
+        "//tests/pytest_plugins:common",
+        "//tests/pytest_plugins:llvm",
+    ],
+)
+
+py_test(
     name = "fork_env_test",
     timeout = "short",
     srcs = ["fork_env_test.py"],
